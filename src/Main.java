@@ -38,6 +38,8 @@ public class Main {
         System.out.println("Part 1: " + challenge7.providedSignal());
         //System.out.println("Part 2: " + challenge6.countBrightness());
 
-
+        System.out.println("==== DAY 8 ====");
+        Challenge8 challenge8 = new Challenge8();
+        System.out.println("Part 1: " + challenge8.countLengthWithEscapes());
     }
 }
