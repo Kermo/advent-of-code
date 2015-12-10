@@ -33,6 +33,11 @@ public class Main {
         System.out.println("Part 1: " + challenge6.countLights());
         System.out.println("Part 2: " + challenge6.countBrightness());
 
+        System.out.println("==== DAY 7 ====");
+        Challenge7 challenge7 = new Challenge7();
+        System.out.println("Part 1: " + challenge7.providedSignal());
+        //System.out.println("Part 2: " + challenge6.countBrightness());
+
 
     }
 }
