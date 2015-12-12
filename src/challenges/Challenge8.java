@@ -75,11 +75,42 @@ public class Challenge8 {
 
             int difference = realLength - trimmedLength;
 
-            if(difference < 0) {
-                System.out.println("Fucked");
+            allTotal += difference;
+        }
+
+        return allTotal;
+    }
+
+    public int countWithExtraEspaces() {
+        int allTotal = 0;
+
+        for(int i = 0; i < lines.length; i++) {
+            int originalLength = lines[i].length();
+
+            StringBuilder result = new StringBuilder();
+            StringCharacterIterator iterator = new StringCharacterIterator(lines[i]);
+            char character = iterator.current();
+
+            while(character != CharacterIterator.DONE) {
+                if (character == '"') {
+                    result.append(character).append('\"');
+                } else if (character == '\\') {
+                    result.append(character).append('\\');
+                } else {
+                    result.append(character);
+                }
+
+                character = iterator.next();
             }
 
+            String string = result.toString();
+
+            int newLength = string.length() + 2;
+
+            int difference = newLength - originalLength;
+
             allTotal += difference;
+
         }
 
         return allTotal;
