@@ -1,4 +1,5 @@
 import challenges.*;
+import challenges.Challenge9;
 
 public class Main {
 
@@ -42,5 +43,9 @@ public class Main {
         Challenge8 challenge8 = new Challenge8();
         System.out.println("Part 1: " + challenge8.countLengthWithEscapes());
         System.out.println("Part 2: " + challenge8.countWithExtraEspaces());
+
+        System.out.println("==== DAY 9 ====");
+        Challenge9 challenge9 = new Challenge9();
+        System.out.println("Part 1: " + challenge9.countShortestRoute());
     }
 }

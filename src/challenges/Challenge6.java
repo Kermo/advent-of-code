@@ -1,5 +1,7 @@
 package challenges;
 
+import utils.FileReader;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
@@ -11,22 +13,11 @@ import java.util.regex.Pattern;
 public class Challenge6 {
 
     public int[][] grid = new int[1000][1000];
-    public String data = "";
     public String[] dataArray;
 
     public Challenge6() {
-        try {
-            Scanner scanner = new Scanner(new File("resources/challenge6.txt"));
-
-            while (scanner.hasNext()) {
-                data += scanner.nextLine() + "\n";
-            }
-
-            dataArray = data.split("\n");
-
-        } catch (IOException e) {
-            System.out.println("Data parsing failed");
-        }
+        FileReader reader = new FileReader();
+        dataArray = reader.readFile("resources/challenge6.txt");
     }
 
     public int countLights() {

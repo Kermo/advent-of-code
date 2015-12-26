@@ -1,32 +1,17 @@
 package challenges;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.Arrays;
-import java.util.Scanner;
+import utils.FileReader;
 
 /**
  * Created by jani on 05/12/15.
  */
 public class Challenge5 {
 
-    public String data;
     public String[] dataArray;
 
     public Challenge5() {
-        try {
-            Scanner scanner = new Scanner(new File("resources/challenge5.txt"));
-
-            while (scanner.hasNext()) {
-                data += scanner.nextLine() + ",";
-            }
-
-            dataArray = data.split(",");
-
-
-        } catch (IOException e) {
-            System.out.println("Data parsing failed");
-        }
+        FileReader reader = new FileReader();
+        dataArray = reader.readFile("resources/challenge5.txt");
     }
 
     public int returnNiceStringCount() {

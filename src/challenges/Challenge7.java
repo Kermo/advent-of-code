@@ -1,32 +1,20 @@
 package challenges;
 
-import java.io.File;
-import java.io.IOException;
+import utils.FileReader;
+
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Scanner;
 
 /**
  * Created by jani on 07/12/15.
  */
 public class Challenge7 {
 
-    public String data = "";
-    public String[] operations;
+    public String[] data;
 
     public Challenge7() {
-        try {
-            Scanner scanner = new Scanner(new File("resources/challenge7.txt"));
-
-            while (scanner.hasNext()) {
-                data += scanner.nextLine() + "\n";
-            }
-
-            operations = data.split("\n");
-
-        } catch (IOException e) {
-            System.out.println("Data parsing failed");
-        }
+        FileReader reader = new FileReader();
+        data = reader.readFile("resources/challenge7.txt");
     }
 
     public int providedSignal() {
@@ -38,16 +26,16 @@ public class Challenge7 {
         while(!map.containsKey("a")) {
 
 
-            for(int i = 0; i < operations.length; i++) {
+            for(int i = 0; i < data.length; i++) {
 
-                if(!operations[i].equals("executed")) {
+                if(!data[i].equals("executed")) {
 
                     String[] actorSignals;
                     String[] inputSignals;
                     String operation = "";
                     boolean operationFound = false;
 
-                    actorSignals = operations[i].split("->");
+                    actorSignals = data[i].split("->");
 
                     String outputSignal = actorSignals[1].replaceAll("[^0-9a-z?!\\.,]", "");
 
@@ -72,11 +60,11 @@ public class Challenge7 {
                                 if (shift[0].contains("RSHIFT")) {
                                     int rshiftValue = map.get(inputSignals[0]) >> Integer.parseInt(shift[1]);
                                     map.put(outputSignal, rshiftValue);
-                                    operations[i] = "executed";
+                                    data[i] = "executed";
                                 } else if (shift[0].contains("LSHIFT")) {
                                     int lshiftValue = map.get(inputSignals[0]) << Integer.parseInt(shift[1]);
                                     map.put(outputSignal, lshiftValue);
-                                    operations[i] = "executed";
+                                    data[i] = "executed";
                                 }
                             }
                         } else if (operation.equals("NOT")) {
@@ -86,7 +74,7 @@ public class Challenge7 {
                             if (map.containsKey(inputSignals[1])) {
                                 int notValue = ~map.get(inputSignals[1]);
                                 map.put(outputSignal, 65536 + notValue);
-                                operations[i] = "executed";
+                                data[i] = "executed";
                             }
                         } else if (operation.equals("AND") || operation.equals("OR")) {
                             inputSignals = actorSignals[0].split(operation);
@@ -98,20 +86,20 @@ public class Challenge7 {
                                     if (map.containsKey(inputSignals[0]) && map.containsKey(inputSignals[1])) {
                                         int andValue = map.get(inputSignals[0]) & map.get(inputSignals[1]);
                                         map.put(outputSignal, andValue);
-                                        operations[i] = "executed";
+                                        data[i] = "executed";
                                     }
                                 } else {
                                     if (map.containsKey(inputSignals[1])) {
                                         int andValue = Integer.parseInt(inputSignals[0]) & map.get(inputSignals[1]);
                                         map.put(outputSignal, andValue);
-                                        operations[i] = "executed";
+                                        data[i] = "executed";
                                     }
                                 }
                             } else if (operation.equals("OR")) {
                                 if (map.containsKey(inputSignals[0]) && map.containsKey(inputSignals[1])) {
                                     int orValue = map.get(inputSignals[0]) | map.get(inputSignals[1]);
                                     map.put(outputSignal, orValue);
-                                    operations[i] = "executed";
+                                    data[i] = "executed";
                                 }
                             }
                         }
@@ -120,11 +108,11 @@ public class Challenge7 {
 
                         if (isNumeric(inputSignal)) {
                             map.put(outputSignal, Integer.parseInt(inputSignal));
-                            operations[i] = "executed";
+                            data[i] = "executed";
                         } else {
                             if (map.containsKey(inputSignal)) {
                                 map.put(outputSignal, map.get(inputSignal));
-                                operations[i] = "executed";
+                                data[i] = "executed";
                             }
                         }
                     }
