@@ -1,4 +1,4 @@
-package challenges;
+package challenges.first;
 
 import utils.FileReader;
 
@@ -14,7 +14,7 @@ public class Challenge7 {
 
     public Challenge7() {
         FileReader reader = new FileReader();
-        data = reader.readFile("resources/challenge7.txt");
+        data = reader.readFile("resources/2015/challenge7.txt");
     }
 
     public int providedSignal() {

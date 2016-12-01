@@ -1,4 +1,4 @@
-package challenges;
+package challenges.first;
 
 import utils.FileReader;
 
@@ -18,7 +18,7 @@ public class Challenge8 {
 
     public Challenge8() {
         FileReader reader = new FileReader();
-        data = reader.readFile("resources/challenge8.txt");
+        data = reader.readFile("resources/2015/challenge8.txt");
     }
 
     public int countLengthWithEscapes() {

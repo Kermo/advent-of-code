@@ -1,4 +1,4 @@
-package challenges;
+package challenges.first;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -21,7 +21,7 @@ public class Challenge2 {
 
     public int resolveArea() {
         try {
-            Scanner scanner = new Scanner(new File("resources/challenge2.txt"));
+            Scanner scanner = new Scanner(new File("resources/2015/challenge2.txt"));
 
             while(scanner.hasNext()) {
                 data = scanner.nextLine();
@@ -52,7 +52,7 @@ public class Challenge2 {
 
     public int resolveRibbon() {
         try {
-            Scanner scanner = new Scanner(new File("resources/challenge2.txt"));
+            Scanner scanner = new Scanner(new File("resources/2015/challenge2.txt"));
 
             while(scanner.hasNext()) {
                 data = scanner.nextLine();

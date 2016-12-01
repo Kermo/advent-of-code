@@ -20,7 +20,7 @@ public class FileReader {
 
     public String[] readFile(String fileLocation) {
         try {
-            Scanner scanner = new Scanner(new File("resources/challenge9.txt"));
+            Scanner scanner = new Scanner(new File(fileLocation));
 
             while (scanner.hasNext()) {
                 data += scanner.nextLine() + "\n";

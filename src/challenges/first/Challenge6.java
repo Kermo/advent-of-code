@@ -1,4 +1,4 @@
-package challenges;
+package challenges.first;
 
 import utils.FileReader;
 
@@ -17,7 +17,7 @@ public class Challenge6 {
 
     public Challenge6() {
         FileReader reader = new FileReader();
-        dataArray = reader.readFile("resources/challenge6.txt");
+        dataArray = reader.readFile("resources/2015/challenge6.txt");
     }
 
     public int countLights() {

@@ -1,4 +1,4 @@
-package challenges;
+package challenges.first;
 
 import javax.xml.bind.annotation.adapters.HexBinaryAdapter;
 import java.security.MessageDigest;

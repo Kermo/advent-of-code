@@ -1,4 +1,4 @@
-package challenges;
+package challenges.first;
 
 import utils.FileReader;
 
@@ -11,7 +11,7 @@ public class Challenge5 {
 
     public Challenge5() {
         FileReader reader = new FileReader();
-        dataArray = reader.readFile("resources/challenge5.txt");
+        dataArray = reader.readFile("resources/2015/challenge5.txt");
     }
 
     public int returnNiceStringCount() {

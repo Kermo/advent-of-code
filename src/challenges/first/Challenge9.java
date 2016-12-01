@@ -1,4 +1,4 @@
-package challenges;
+package challenges.first;
 
 import utils.FileReader;
 
@@ -14,7 +14,7 @@ public class Challenge9 {
     public Challenge9() {
 
         FileReader reader = new FileReader();
-        data = reader.readFile("resources/challenge9.txt");
+        data = reader.readFile("resources/2015/challenge9.txt");
     }
 
     public int countShortestRoute() {

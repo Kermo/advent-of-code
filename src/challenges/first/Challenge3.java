@@ -1,4 +1,4 @@
-package challenges;
+package challenges.first;
 
 import java.io.File;
 import java.io.IOException;
@@ -20,7 +20,7 @@ public class Challenge3 {
 
     public Challenge3() {
         try {
-            directions = new Scanner(new File("resources/challenge3.txt"), "UTF-8").useDelimiter("\\A").next();
+            directions = new Scanner(new File("resources/2015/challenge3.txt"), "UTF-8").useDelimiter("\\A").next();
         } catch (IOException e) {
             System.out.println("File not found");
         }
