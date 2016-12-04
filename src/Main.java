@@ -13,5 +13,10 @@ public class Main {
         Challenge2 challenge2 = new Challenge2();
         System.out.println("Part 1: " + challenge2.resolveCode());
         System.out.println("Part 2: " + challenge2.resolveComplicatedCode());
+
+        System.out.println("==== DAY 3 ====");
+        Challenge3 challenge3 = new Challenge3();
+        System.out.println("Part 1: " + challenge3.countValidTriangles());
+        System.out.println("Part 2: " + challenge3.countValidTrianglesFromColumns());
     }
 }
