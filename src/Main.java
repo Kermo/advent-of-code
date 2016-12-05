@@ -18,5 +18,10 @@ public class Main {
         Challenge3 challenge3 = new Challenge3();
         System.out.println("Part 1: " + challenge3.countValidTriangles());
         System.out.println("Part 2: " + challenge3.countValidTrianglesFromColumns());
+
+        System.out.println("==== DAY 4 ====");
+        Challenge4 challenge4 = new Challenge4();
+        challenge4.resolve();
+
     }
 }

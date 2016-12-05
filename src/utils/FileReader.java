@@ -1,8 +1,12 @@
 package utils;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
+import java.util.regex.PatternSyntaxException;
 
 /**
  * Created by jani on 07/12/15.
@@ -33,5 +37,25 @@ public class FileReader {
         }
 
         return lines;
+    }
+
+    public List<String[]> getFileLinesSplit(String fileName, String delimiter) {
+        List<String[]> list = new ArrayList<>();
+
+        try (BufferedReader br = new BufferedReader(new java.io.FileReader(fileName))) {
+            String input;
+            while ((input = br.readLine()) != null) {
+                try {
+                    String[] s = input.split(delimiter);
+                    list.add(s);
+                } catch (PatternSyntaxException pse) {
+                    System.out.println("Bad regex syntax. Delimiter \"" + delimiter + " \"");
+                    return null;
+                }
+            }
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        }
+        return list;
     }
 }
