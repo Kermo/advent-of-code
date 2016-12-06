@@ -21,15 +21,21 @@ public class Main {
 
         System.out.println("==== DAY 4 ====");
         Challenge4 challenge4 = new Challenge4();
-        challenge4.resolve();
+        System.out.println("Part 1: " + challenge4.resolveSumOfChecksums());
+        System.out.println("Part 2: " + challenge4.getSectorId());
 
-        System.out.println("==== DAY 5 ====");
+        /*System.out.println("==== DAY 5 ====");
         Challenge5 challenge5 = new Challenge5();
         try {
             challenge5.resolve();
         } catch (Exception e) {
             //
-        }
+        }*/
+
+        System.out.println("==== DAY 6 ====");
+        Challenge6 challenge6 = new Challenge6();
+        System.out.println("Part 1: " + challenge6.returnMostCommons());
+        System.out.println("Part 2: " + challenge6.returnLeastCommons());
 
     }
 }

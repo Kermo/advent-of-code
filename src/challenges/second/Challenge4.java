@@ -11,6 +11,8 @@ import java.util.stream.Collectors;
 public class Challenge4 {
 
     public List<String[]> data;
+    public List<String[]> part2data = new ArrayList<>();
+
 
     public Challenge4() {
 
@@ -30,10 +32,9 @@ public class Challenge4 {
         return (char) ((((c - 'a') + rotation) % 26) + 'a');
     }
 
-    public void resolve() {
+    public int resolveSumOfChecksums() {
 
         List<String[]> input = data;
-        List<String[]> part2data = new ArrayList<>();
         int sum = 0;
 
         for (String[] each : input) {
@@ -63,7 +64,10 @@ public class Challenge4 {
 
         }
 
-        System.out.println(sum);
+        return sum;
+    }
+
+    public String getSectorId() {
 
         for (String[] each : part2data) {
             String temp = "";
@@ -74,8 +78,12 @@ public class Challenge4 {
                 temp += "-";
             }
             temp += each[each.length - 1];
-            if (temp.startsWith("northpole-object-storage")) System.out.println(temp);
+            if (temp.startsWith("northpole-object-storage")) {
+                return temp;
+            }
         }
+
+        return null;
 
     }
 }
