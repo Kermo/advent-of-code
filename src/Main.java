@@ -23,5 +23,13 @@ public class Main {
         Challenge4 challenge4 = new Challenge4();
         challenge4.resolve();
 
+        System.out.println("==== DAY 5 ====");
+        Challenge5 challenge5 = new Challenge5();
+        try {
+            challenge5.resolve();
+        } catch (Exception e) {
+            //
+        }
+
     }
 }
