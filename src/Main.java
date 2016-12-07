@@ -37,5 +37,10 @@ public class Main {
         System.out.println("Part 1: " + challenge6.returnMostCommons());
         System.out.println("Part 2: " + challenge6.returnLeastCommons());
 
+        System.out.println("==== DAY 7 ====");
+        Challenge7 challenge7 = new Challenge7();
+        System.out.println("Part 1: " + challenge7.countTLSips());
+        System.out.println("Part 2: " + challenge7.countValidSSLs());
+
     }
 }
