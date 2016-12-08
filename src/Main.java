@@ -42,5 +42,10 @@ public class Main {
         System.out.println("Part 1: " + challenge7.countTLSips());
         System.out.println("Part 2: " + challenge7.countValidSSLs());
 
+        System.out.println("==== DAY 8 ====");
+        Challenge8 challenge8 = new Challenge8();
+        System.out.println("Part 1: " + challenge8.countLEDs());
+        System.out.println("Part 2: ");
+        challenge8.drawLetters();
     }
 }
