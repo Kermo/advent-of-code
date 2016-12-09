@@ -1,5 +1,7 @@
 import challenges.second.*;
 
+import java.util.Date;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -47,5 +49,10 @@ public class Main {
         System.out.println("Part 1: " + challenge8.countLEDs());
         System.out.println("Part 2: ");
         challenge8.drawLetters();
+
+        System.out.println("==== DAY 9 ====");
+        Challenge9 challenge9 = new Challenge9();
+        System.out.println("Part 1: " + challenge9.countLength());
+        System.out.println("Part 2: " + challenge9.countSecondLength());
     }
 }
