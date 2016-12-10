@@ -54,5 +54,10 @@ public class Main {
         Challenge9 challenge9 = new Challenge9();
         System.out.println("Part 1: " + challenge9.countLength());
         System.out.println("Part 2: " + challenge9.countSecondLength());
+
+        System.out.println("==== DAY 10 ====");
+        Challenge10 challenge10 = new Challenge10();
+        System.out.println("Part 1: " + challenge10.solveBot());
+        System.out.println("Part 2: " + challenge10.countSum());
     }
 }
