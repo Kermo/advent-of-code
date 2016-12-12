@@ -59,5 +59,15 @@ public class Main {
         Challenge10 challenge10 = new Challenge10();
         System.out.println("Part 1: " + challenge10.solveBot());
         System.out.println("Part 2: " + challenge10.countSum());
+
+        System.out.println("==== DAY 11 ==== SKIPPED");
+        //Challenge11 challenge11 = new Challenge11();
+        //System.out.println("Part 1: " + challenge11.countMoves());
+
+        System.out.println("==== DAY 12 ====");
+        Challenge12 challenge12 = new Challenge12();
+        System.out.println("Part 1: " + challenge12.valueOfA());
+        System.out.println("Part 2: " + challenge12.valueOfAAfterC());
+
     }
 }
