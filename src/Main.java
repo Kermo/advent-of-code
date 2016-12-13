@@ -60,8 +60,14 @@ public class Main {
         System.out.println("Part 1: " + challenge10.solveBot());
         System.out.println("Part 2: " + challenge10.countSum());
 
-        System.out.println("==== DAY 11 ==== SKIPPED");
-        //Challenge11 challenge11 = new Challenge11();
+        System.out.println("==== DAY 11 ====");
+        try {
+            Challenge11 challenge11 = new Challenge11();
+            System.out.println("Part 1: " + challenge11.countMovesWith10Elems());
+            System.out.println("Part 2: " + challenge11.countMovesWith14Elems());
+        } catch (Exception e) {
+            //
+        }
         //System.out.println("Part 1: " + challenge11.countMoves());
 
         System.out.println("==== DAY 12 ====");
