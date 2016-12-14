@@ -80,5 +80,9 @@ public class Main {
         System.out.println("Part 1: " + challenge13.countMoves());
         System.out.println("Part 2: " + challenge13.countPossibleMoves());
 
+        System.out.println("==== DAY 14 ====");
+        Challenge14 challenge14 = new Challenge14();
+        System.out.println("Part 1: " + challenge14.findLastIndes());
+        System.out.println("Part 2: " + challenge14.findLastIndesWithExtra());
     }
 }
