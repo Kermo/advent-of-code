@@ -73,7 +73,12 @@ public class Main {
         System.out.println("==== DAY 12 ====");
         Challenge12 challenge12 = new Challenge12();
         System.out.println("Part 1: " + challenge12.valueOfA());
-        System.out.println("Part 2: " + challenge12.valueOfAAfterC());
+        //System.out.println("Part 2: " + challenge12.valueOfAAfterC());
+
+        System.out.println("==== DAY 13 ====");
+        Challenge13 challenge13 = new Challenge13();
+        System.out.println("Part 1: " + challenge13.countMoves());
+        System.out.println("Part 2: " + challenge13.countPossibleMoves());
 
     }
 }
