@@ -82,6 +82,10 @@ public class Main {
         System.out.println("==== DAY 14 ====");
         Challenge14 challenge14 = new Challenge14();
         System.out.println("Part 1: " + challenge14.findLastIndes());
-        System.out.println("Part 2: " + challenge14.findLastIndesWithExtra());
+        //System.out.println("Part 2: " + challenge14.findLastIndesWithExtra());
+
+        System.out.println("==== DAY 15 ====");
+        Challenge15 challenge15 = new Challenge15();
+        System.out.println("Part 1: " + challenge15.returnFirstTime());
     }
 }
