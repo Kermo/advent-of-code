@@ -87,5 +87,10 @@ public class Main {
         System.out.println("==== DAY 15 ====");
         Challenge15 challenge15 = new Challenge15();
         System.out.println("Part 1: " + challenge15.returnFirstTime());
+
+        System.out.println("==== DAY 16 ====");
+        Challenge16 challenge16 = new Challenge16();
+        System.out.println("Part 1: " + challenge16.returnChecksum());
+        System.out.println("Part 2: " + challenge16.returnSecondChecksum());
     }
 }
