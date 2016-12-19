@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("==== DAY 1 ====");
+        /*System.out.println("==== DAY 1 ====");
         Challenge1 challenge1 = new Challenge1();
         System.out.println("Part 1: " + challenge1.countDistance());
         System.out.println("Part 2: " + challenge1.distanceWhenPositioningAgain());
@@ -26,13 +26,13 @@ public class Main {
         System.out.println("Part 1: " + challenge4.resolveSumOfChecksums());
         System.out.println("Part 2: " + challenge4.getSectorId());
 
-        /*System.out.println("==== DAY 5 ====");
+        *//*System.out.println("==== DAY 5 ====");
         Challenge5 challenge5 = new Challenge5();
         try {
             challenge5.resolve();
         } catch (Exception e) {
             //
-        }*/
+        }*//*
 
         System.out.println("==== DAY 6 ====");
         Challenge6 challenge6 = new Challenge6();
@@ -96,7 +96,11 @@ public class Main {
         System.out.println("==== DAY 18 ====");
         Challenge18 challenge18 = new Challenge18();
         System.out.println("Part 1: " + challenge18.countSafeTiles());
-        System.out.println("Part 2: " + challenge18.countSafeTilesAgain());
+        System.out.println("Part 2: " + challenge18.countSafeTilesAgain());*/
 
+        System.out.println("==== DAY 19 ====");
+        Challenge19 challenge19 = new Challenge19();
+        System.out.println("Part 1: " + challenge19.returnRichElf());
+        System.out.println("Part 2: " + challenge19.returnVeryRichElf());
     }
 }
