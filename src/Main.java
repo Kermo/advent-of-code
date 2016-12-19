@@ -92,5 +92,11 @@ public class Main {
         Challenge16 challenge16 = new Challenge16();
         System.out.println("Part 1: " + challenge16.returnChecksum());
         System.out.println("Part 2: " + challenge16.returnSecondChecksum());
+
+        System.out.println("==== DAY 18 ====");
+        Challenge18 challenge18 = new Challenge18();
+        System.out.println("Part 1: " + challenge18.countSafeTiles());
+        System.out.println("Part 2: " + challenge18.countSafeTilesAgain());
+
     }
 }
