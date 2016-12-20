@@ -102,5 +102,11 @@ public class Main {
         Challenge19 challenge19 = new Challenge19();
         System.out.println("Part 1: " + challenge19.returnRichElf());
         System.out.println("Part 2: " + challenge19.returnVeryRichElf());
+
+        System.out.println("==== DAY 20 ====");
+        Challenge20 challenge20 = new Challenge20();
+        System.out.println("Part 1: " + challenge20.returnMinIP());
+        System.out.println("Part 2: " + challenge20.returnValidIpCount());
+
     }
 }
