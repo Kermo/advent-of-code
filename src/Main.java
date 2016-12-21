@@ -111,8 +111,7 @@ public class Main {
         System.out.println("==== DAY 21 ====");
         Challenge21 challenge21 = new Challenge21();
         System.out.println("Part 1: " + challenge21.returnScrambledString());
-        System.out.print("Part 2: ");
-        challenge21.returnUnscrambledString();
+        System.out.print("Part 2: " + challenge21.returnUnscrambledString());
 
 
     }

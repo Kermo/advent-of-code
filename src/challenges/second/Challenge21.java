@@ -9,6 +9,7 @@ public class Challenge21 {
 
     String[] data;
     String input = "abcdefgh";
+    String unscrabledString = "";
 
     public Challenge21() {
         FileReader reader = new FileReader();
@@ -117,17 +118,18 @@ public class Challenge21 {
         return scrambled;
     }
 
-    public void returnUnscrambledString() {
-        permuteString("", "abcdefgh");
+    public String returnUnscrambledString() {
+        String result = permuteString("", "abcdefgh");
+        return result;
     }
 
-    public void permuteString(String beginningString, String endingString) {
+    public String permuteString(String beginningString, String endingString) {
 
         if (endingString.length() <= 1) {
             input = beginningString + endingString;
             String result = returnScrambledString();
             if(result.equals("fbgdceah")) {
-                System.out.print(input);
+                unscrabledString = input;
             }
         } else {
             for (int i = 0; i < endingString.length(); i++) {
@@ -139,5 +141,7 @@ public class Challenge21 {
                 }
             }
         }
+
+        return unscrabledString;
     }
 }
