@@ -1,3 +1,5 @@
+package challenges;
+
 import challenges.second.*;
 
 import java.util.Date;
